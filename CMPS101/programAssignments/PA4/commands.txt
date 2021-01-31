@@ -1,0 +1,95 @@
+
+
+# PA3 Tests with Valgrind
+
+valgrind --leak-check=full ./DigraphProperties PA3Grading/input/public/input_a.txt outpuba
+valgrind --leak-check=full ./DigraphProperties PA3Grading/input/public/input_b.txt outpubb
+valgrind --leak-check=full ./DigraphProperties PA3Grading/input/public/input_c.txt outpubc
+valgrind --leak-check=full ./DigraphProperties PA3Grading/input/public/input_d.txt outpubd
+valgrind --leak-check=full ./DigraphProperties PA3Grading/input/public/input_e.txt outpube
+valgrind --leak-check=full ./DigraphProperties PA3Grading/input/public/input_f.txt outpubf
+
+valgrind --leak-check=full ./DigraphProperties PA3Grading/input/private/input_g.txt outprig
+valgrind --leak-check=full ./DigraphProperties PA3Grading/input/private/input_h.txt outprih
+valgrind --leak-check=full ./DigraphProperties PA3Grading/input/private/input_i.txt outprii
+valgrind --leak-check=full ./DigraphProperties PA3Grading/input/private/input_j.txt outprij
+
+# PA3 Tests without Valgrind
+
+./DigraphProperties PA3Grading/input/public/input_a.txt outpuba
+./DigraphProperties PA3Grading/input/public/input_b.txt outpubb
+./DigraphProperties PA3Grading/input/public/input_c.txt outpubc
+./DigraphProperties PA3Grading/input/public/input_d.txt outpubd
+./DigraphProperties PA3Grading/input/public/input_e.txt outpube
+./DigraphProperties PA3Grading/input/public/input_f.txt outpubf
+
+./DigraphProperties PA3Grading/input/private/input_g.txt outprig
+./DigraphProperties PA3Grading/input/private/input_h.txt outprih
+./DigraphProperties PA3Grading/input/private/input_i.txt outprii
+./DigraphProperties PA3Grading/input/private/input_j.txt outprij
+
+
+
+
+# PA3 differs
+
+opendiff outprig PA3Grading/answerKey/private/input_g_answer.txt 
+opendiff outprih PA3Grading/answerKey/private/input_h_answer.txt 
+opendiff outprii PA3Grading/answerKey/private/input_i_answer.txt 
+opendiff outprij PA3Grading/answerKey/private/input_j_answer.txt 
+
+opendiff outpuba PA3Grading/answerKey/public/input_a_answer.txt
+opendiff outpubb PA3Grading/answerKey/public/input_b_answer.txt
+opendiff outpubc PA3Grading/answerKey/public/input_c_answer.txt
+opendiff outpubd PA3Grading/answerKey/public/input_d_answer.txt
+opendiff outpube PA3Grading/answerKey/public/input_e_answer.txt
+opendiff outpubf PA3Grading/answerKey/public/input_f_answer.txt
+
+# -------------------------------------------
+
+# PA3 Tests altered to exclude TopSort Distance and Acyclic
+
+valgrind --leak-check=full ./DigraphProperties PA3MYTESTS/private/input_myg.txt outprimyg
+valgrind --leak-check=full ./DigraphProperties PA3MYTESTS/private/input_myh.txt outprimyh
+valgrind --leak-check=full ./DigraphProperties PA3MYTESTS/private/input_myi.txt outprimyi
+valgrind --leak-check=full ./DigraphProperties PA3MYTESTS/private/input_myj.txt outprimyj
+
+valgrind --leak-check=full ./DigraphProperties PA3MYTESTS/public/input_mya.txt outpubmya
+valgrind --leak-check=full ./DigraphProperties PA3MYTESTS/public/input_myb.txt outpubmyb
+valgrind --leak-check=full ./DigraphProperties PA3MYTESTS/public/input_myc.txt outpubmyc
+valgrind --leak-check=full ./DigraphProperties PA3MYTESTS/public/input_myd.txt outpubmyd
+valgrind --leak-check=full ./DigraphProperties PA3MYTESTS/public/input_mye.txt outpubmye
+valgrind --leak-check=full ./DigraphProperties PA3MYTESTS/public/input_myf.txt outpubmyf
+
+
+
+# -------------------------------------------
+
+
+
+# PA4 Tests with valgrind
+
+valgrind --leak-check=full ./DigraphProperties public-4/input_a.txt outa
+valgrind --leak-check=full ./DigraphProperties public-4/input_b.txt outb
+valgrind --leak-check=full ./DigraphProperties public-4/input_c.txt outc
+valgrind --leak-check=full ./DigraphProperties public-4/input_d.txt outd
+
+# PA4 Tests without valgrind
+
+./DigraphProperties public-4/input_a.txt outa
+./DigraphProperties public-4/input_b.txt outb
+./DigraphProperties public-4/input_c.txt outc
+./DigraphProperties public-4/input_d.txt outd
+
+# PA4 differ
+
+diff public-4/input_a_answer.txt outa
+diff public-4/input_b_answer.txt outb
+diff public-4/input_c_answer.txt outc
+diff public-4/input_d_answer.txt outd
+
+
+
+
+
+

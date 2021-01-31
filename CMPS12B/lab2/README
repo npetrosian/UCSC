@@ -1,0 +1,17 @@
+These are the files that are included in this submission:
+README (this file)
+FileReverse.c
+FileReverse.o
+Makefile
+FileReverse
+f1(file with the input characters)
+f2(file created by the program as specified )
+log.txt(specifies that I worked alone)
+
+To compile, type: 
+make
+
+To clean, type:
+make clean
+
+

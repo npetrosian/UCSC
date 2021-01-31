@@ -1,0 +1,97 @@
+40, 1 40, 1 12, 1 4, 1 30, 1 11, 1 10, 1 39, 1 13, 1 24, 1 37, 1 8, 1 36, 1 3, 1 31, 1 6, 1 26, 2 1, 2 35, 2 31, 2 39, 2 22, 2 23, 2 36, 2 40, 2 37, 2 17, 2 3, 3 2, 3 8, 3 10, 3 17, 3 37, 3 33, 3 22, 3 30, 3 38, 3 12, 3 29, 3 36, 3 5, 3 15, 3 24, 3 35, 3 39, 4 3, 4 33, 4 30, 4 18, 4 32, 4 19, 4 10, 4 39, 5 4, 5 18, 5 38, 5 26, 5 34, 5 28, 5 24, 5 21, 5 39, 5 17, 5 7, 5 22, 5 11, 5 13, 5 29, 5 27, 5 8, 6 5, 6 2, 6 15, 6 8, 6 21, 7 6, 7 23, 7 10, 7 19, 7 3, 7 40, 7 21, 7 2, 7 38, 7 37, 7 4, 7 33, 7 36, 8 7, 8 9, 8 19, 8 10, 8 15, 8 39, 8 31, 8 40, 8 12, 8 20, 8 1, 8 26, 8 27, 8 32, 8 2, 8 36, 8 5, 8 11, 8 3, 9 8, 9 14, 9 18, 9 15, 9 25, 9 32, 9 24, 9 36, 9 20, 9 31, 9 37, 9 6, 9 28, 9 23, 9 17, 9 11, 9 10, 9 1, 10 9, 10 23, 10 13, 11 10, 11 2, 11 9, 11 25, 11 22, 11 3, 11 7, 11 29, 11 27, 11 1, 11 36, 11 20, 11 8, 11 18, 11 15, 12 11, 12 33, 12 25, 12 23, 12 27, 12 4, 12 6, 12 30, 12 35, 12 29, 12 5, 13 12, 13 9, 13 4, 13 11, 13 22, 13 27, 13 24, 13 25, 13 36, 13 16, 13 30, 13 20, 13 2
+[PrintDigraph being tested (no operands)]
+PrintDigraph
+PrintDigraph 1
+PrintDigraph 4 4
+PrintDigraph print
+Print Digraph
+Print PrintDigraph
+[GetOrder being tested (no operands)]
+GetOrder
+GetOrder 4
+GetOrder a
+Get Order
+Get GetOrder
+GetOrder 095510952
+getorder
+[GetSize being tested (no operands)]
+GetSize
+GetSize 4
+GetSize wwww
+Get Size
+Getsize
+Get GetSize
+GetSize 325095093 20395 90320905423 09 940490 23
+[GetOutDegree being tested(1 operand)]
+GetOutDegree 4
+GetOutDegree 30
+GetOutDegree 0
+GetOutDegree 41
+GetOutDegree -99
+GetOutDegree
+GetOutDegree 5 10 23 99
+GETOUTDEGREE 20
+Getoutdegree 10
+[AddEdge being tested (2 operands) (0 means edge is added, 1 means no edge was added since it existed)]
+AddEdge 33 2
+AddEdge 1 40
+AddEdge 5
+AddEdge 41 33
+AddEdge 0 10
+AddEdge 12 421 421 094122 9241
+Add Edge 4 4
+AddEdge 4 8 12 16
+AddEdge ADD
+AddEdge
+[DeleteEdge being tested (2 operands) (0 means edge was deleted, 1 means no edge was deleted since it didn't exist)]
+GetSize
+DeleteEdge 33 2
+GetSize
+DeleteEdge 33 2
+DeleteEdge 99 0
+DeleteEdge
+DeleteEdge edge
+[GetCountSCC being tested (no operands)]
+GetCountSCC
+GetCountSCC
+GetCountSCC
+GetCountSCC
+GetCountSCC
+GetCountSCC
+GetCountSCC
+GetCountSCC 3
+GetCountSCC 9 10
+GetCountSCC hello
+GetCountSCC GetCountSCC GetCountSCC
+[GetNumSCCVertices being tested (1 operand)]
+GetNumSCCVertices 4
+GetNumSCCVertices 33
+GetNumSCCVertices 40
+GetNumSCCVertices 41
+GetNumSCCVertices -3
+GetNumSCCVertices 
+GetNumSCCVertices 4 10
+GetNumSCCVertices string
+GetNumSCCVertices 4
+GetNumSCCVertices 4
+GetNumSCCVertices 4
+GetNumSCCVertices 4
+[InSameSCC being tested (2 operands) (outputs YES or NO)]
+InSameSCC 5 20
+InSameSCC 5 20
+InSameSCC 5 20
+InSameSCC 5 20
+InSameSCC 5 20
+InSameSCC 4 4
+InSameSCC 5 41
+InSameSCC -5 20
+InSameSCC 5 9 arethey?
+InSameSCC 9
+InSameSCC 10 33 20
+InSameSCC
+InSameSCC 5 20 InSameSCC 5 20
+[More miscellaneous stress testing]
+33, 9 10, 31 29
+ASDFGHJKL ASDFGHJKL
+TopoSort
+Distance 3 9

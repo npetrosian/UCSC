@@ -1,0 +1,23 @@
+Natalie Petrosian
+UserID: npetrosi
+Assignment: PA2
+
+The following files are being submitted for PA2: 
+
+Graph.c: 
+Contains the methods and functions for the Graph ADT.
+
+Graph.h
+Contains the declarations for the Graph ADT.
+
+GraphProperties.c
+The client for the Graph ADT which reads the input file and generates the output file
+
+List.c
+Provided by the instructors. Provides the methods and data for the List ADT.
+
+List.h
+Provided by the instructors. Provides the declarations for the List ADT.
+
+Makefile
+Compiles and links the code into the executable GraphProperties.

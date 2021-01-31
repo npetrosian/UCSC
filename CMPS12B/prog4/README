@@ -1,0 +1,20 @@
+Name: Natalie Petrosian
+Class: 12B
+CruzID: npetrosi
+
+These are the files that are included in this submission:
+DictionaryInterface.java
+DuplicateKeyException.java
+KeyNotFoundException.java
+DictionaryClient.java
+Dictionary.java
+Makefile
+README (this file)
+log.txt
+
+To compile, type: 
+make
+
+To clean, type:
+make clean
+

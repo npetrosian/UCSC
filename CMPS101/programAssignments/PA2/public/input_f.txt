@@ -1,0 +1,41 @@
+20, 1 7, 11 7, 3 7, 2 8, 12 8, 4 8, 8 14, 5 9, 9 10, 6 16, 16 18, 7 11, 17 19, 19 15
+PrintGraph
+GetOrder
+GetSize
+GetOrder
+GetSize
+GetOrder
+GetSize
+GetOrder
+GetSize
+GetOrder
+GetSize
+GetNeighborCount 7
+PathExists 20 1
+PathExists 2 12
+GetOrder
+GetSize
+GetOrder
+GetSize
+GetOrder
+GetSize
+GetOrder
+GetSize
+GetOrder
+GetSize
+PathExists 6 20
+GetNeighborCount 7
+GetNeighborCount 21
+GetOrder
+GetSize
+GetOrder
+GetSize
+GetOrder
+GetSize
+GetOrder
+GetSize
+GetOrder
+GetSize
+GetOrder
+GetSize
+PrintGraph

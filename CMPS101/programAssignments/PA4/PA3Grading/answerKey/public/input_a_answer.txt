@@ -1,0 +1,32 @@
+PrintDigraph
+8, 1 2, 2 5, 3 6, 4 1, 4 5, 5 1, 5 2, 5 3, 6 8, 7 4, 7 5, 8 5
+GetOrder
+8
+GetSize
+12
+GetOutDegree 5
+3
+GetOutDegree 5
+3
+GetOutDegree 3
+1
+GetOutDegree 1
+1
+GetOutDegree 5
+3
+GetSize
+12
+GetOrder
+8
+PrintDigraph
+8, 1 2, 2 5, 3 6, 4 1, 4 5, 5 1, 5 2, 5 3, 6 8, 7 4, 7 5, 8 5
+GetOutDegree 9
+ERROR
+PrintDigraph 1
+ERROR
+GetOrder 1
+ERROR
+NotAnOp
+ERROR
+ReallyIPromise
+ERROR

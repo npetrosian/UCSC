@@ -1,0 +1,19 @@
+These are the files that are included in this submission:
+README (this file)
+HelloUser.java
+HelloUser2.java
+Makefile
+Hello (the jar file)
+
+To compile the two Java source files, do this: 
+make
+
+To clean the binaries, do this:
+make clean
+
+The makefile creates a temporary manifest file that makes the main routine in HelloUser2.java take effect when you run the jar file Hello.
+
+When you run Hello, you should see:
+Hello, go Banana Slugs! 
+
+

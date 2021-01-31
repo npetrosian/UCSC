@@ -1,0 +1,16 @@
+15, 15 9, 14 13, 12 6, 11 13, 6 2, 1 7, 8 2, 3 9, 10 5, 4 5, 12 8, 7 3, 4 9
+PrintGraph
+GetOrder
+GetSize
+GetNeighborCount 2
+PathExists 7 10
+PathExists 10 7
+PathExists 6 8
+PathExists 8 6
+PathExists 3 10
+PathExists 3 7
+PathExists 12 13
+PathExists 13 12
+GetOrder
+GetSize
+PrintGraph

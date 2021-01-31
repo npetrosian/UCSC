@@ -1,0 +1,14 @@
+
+public class question5 {
+	
+	public void probes(int key, int tableSize) {
+		int firstProbe = key % 11;
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,17 @@
+Name: Natalie Petrosian
+Class: 12M
+CruzID: npetrosi
+
+These are the files that are included in this submission:
+README (this file)
+Makefile
+charType.c(the source file)
+log.txt
+
+To compile, type: 
+make
+
+To clean, type:
+make clean
+
+

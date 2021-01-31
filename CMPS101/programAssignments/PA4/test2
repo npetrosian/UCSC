@@ -1,0 +1,30 @@
+6, 1 6
+PrintDigraph
+GetOrder
+GetSize
+GetOutDegree 1
+GetOutDegree 6
+GetOutDegree 1
+GetOutDegree 6
+GetOutDegree
+GetOutDegree 2 2
+GetOutDegree 6 6
+GetOutDegree 1 1
+DeleteEdge 6 5
+PrintDigraph
+GetCountSCC
+GetCountSCC 1
+GetCountSCC 8
+GetNumSCCVertices 1
+GetNumSCCVertices
+GetNumSCCVertices 1 1
+GetNumSCCVertices 8
+GetNumSCCVertices 8 7
+InSameSCC 1 3
+InSameSCC
+InSameSCC 1
+InSameSCC 1 6
+InSameSCC 6 1
+InSameSCC 8
+InSameSCC 8 7
+PrintDigraph

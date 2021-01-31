@@ -1,0 +1,30 @@
+15, 1 7, 1 13, 1 9, 1 15, 1 6, 2 14, 2 1, 2 6, 2 12, 2 15, 2 9, 2 13, 2 4, 2 7, 2 10, 3 9, 4 9, 4 6, 4 14, 4 13, 4 7, 4 10, 5 7, 5 1, 5 15, 5 14, 5 4, 5 2, 5 13, 5 6, 5 10, 6 7, 8 2, 8 12, 8 14, 8 13, 8 9, 8 15, 8 10, 8 11, 9 15, 10 1, 10 13, 11 15, 11 7, 11 2, 11 13, 11 1, 11 10, 11 9, 11 6, 11 4, 12 9, 12 1, 12 14, 13 7, 13 15, 14 13, 14 15, 14 1, 14 7, 14 6, 14 9, 15 6, 15 7
+PrintDigraph
+GetOrder
+GetSize
+AddEdge 1 14
+DeleteEdge 1 14
+AddEdge 9 13
+AddEdge 12 10
+AddEdge 3 8
+AddEdge 5 3
+DeleteEdge 12 10
+DeleteEdge 5 3
+DeleteEdge 9 13
+DeleteEdge 3 8
+DeleteEdge 8 11
+DeleteEdge 11 2
+DeleteEdge 2 4
+DeleteEdge 4 10
+DeleteEdge 12 14
+DeleteEdge 14 1
+DeleteEdge 1 13
+DeleteEdge 9 15
+DeleteEdge 15 6
+DeleteEdge 6 7
+AddEdge 8 3
+AddEdge 10 4
+AddEdge 9 13
+GetSize
+GetOrder
+PrintDigraph

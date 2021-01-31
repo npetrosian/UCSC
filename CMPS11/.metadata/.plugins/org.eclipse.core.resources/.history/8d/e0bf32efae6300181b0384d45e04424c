@@ -1,0 +1,17 @@
+
+public class question5 {
+	
+	public void probes(int key, int tableSize) {
+		int firstProbe = key % tableSize;
+		int hashTwoVal;
+		for(int i = 0; i < tableSize; i++) {
+			hashTwoVal = key % 11
+		}
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

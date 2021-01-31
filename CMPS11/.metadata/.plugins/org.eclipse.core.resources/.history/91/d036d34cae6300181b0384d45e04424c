@@ -1,0 +1,13 @@
+
+public class question5 {
+	
+	public void probes(int key, int i) {
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

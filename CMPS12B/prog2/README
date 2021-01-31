@@ -1,0 +1,19 @@
+Name: Natalie Petrosian
+Class: 12B
+CruzID: npetrosi
+
+These are the files that are included in this submission:
+Term.java
+BinarySearchDeluxe.java
+Autocomplete.java
+Makefile
+README
+log.txt
+
+To compile, type: 
+make
+
+To clean, type:
+make clean
+
+

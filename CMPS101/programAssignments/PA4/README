@@ -1,0 +1,112 @@
+Name: Natalie Petrosian
+UserID: npetrosi
+Assignment: PA4
+
+Digraph.c:
+Contains the methods and functions for the Digraph ADT.
+
+Digraph.h:
+Contains the declarations for the Digraph ADT.
+
+DigraphProperties.c:
+This is the client for the Digraph ADT which reads the input file and generates the output file.
+
+List.c:
+Provided by the instructors. Provides the methods and data for the List ADT.
+
+List.h:
+Provided by the instructors. Provides the declarations for the List ADT.
+
+Makefile:
+Compiles and links the code into the executable DigraphProperties.
+
+Additional requirement for PA4: Describe all fields in DigraphObj besides the ones provided 
+(numVertices, numEdges, array of Lists of outgoing neighbors)
+
+The Digraph object is defined as follows:
+
+typedef struct DigraphObj {
+      int numVertices;
+      int numEdges;
+      int SCCIndex;
+      Node adjacencyList[MAX_ARRAY_SIZE];
+      Node reverseAdjacencyList[MAX_ARRAY_SIZE];
+      Node SCCArray[MAX_ARRAY_SIZE];
+      int visitStatus[MAX_ARRAY_SIZE];
+      int entryTime[MAX_ARRAY_SIZE];
+      int finishTime[MAX_ARRAY_SIZE];
+      int SCCFlag;
+} DigraphObj;
+
+SCCArray[] is a new addition to the Digraph data structure for PA4. It is an array of linked lists. It's initialized as all nulls when a new graph is created. The algorithm to populate the SCCArray is as follows:
+The DFS is called for all unvisited vertices, afterwards the finishTime array is used to call DFS again but this time with reversed edges and also with the vertices with the largest finish times first. As SCC's are detected the vertices in the SCC's are placed in the the SCCSArray. So if we have found 3 SCCS where SCC1 is v1 and v2, SCC2 is v3, v5 and v6 and SCC3 is v4, then SCCArray[0] will point to a linked list of v1 and v2, SCCArray[1] will point to a linked list of v3, v5 and v6 and SCCArray[2] will point to just the v4 node. Each linked list is of course terminated by a null pointer. SCCIndex is updated as SCC's are discovered and increments to the next index in SCCArray[].
+
+Efficiency note 1:
+------------------
+Please note that the SCC's are ONLY generated when absolutely necessary. If one of the 3 new SCC methods are called AND the graph has been altered since the last time an SCC method was called (or SCC's haven't been generated yet), then and only then, a new SCC will be generated. This is achieved by a flag in the DigraphObj structure named SCCflag that gets set to 1 when the SCC's are generated and gets set to 0 when the Digraph is altered by an addEdge() or a deleteEdge(). This allows the SCC methods to know if SCC's should be regenerated or not. Any time an SCC is regenerated, the previous SCC's allocated memory is freed.
+
+Efficiency note 2:
+------------------
+When line 1 of the input is read in, the reverse adjacency array of lists is created right there, along with the original adjacencyarray of lists. When edges are added or deleted the adjacency list and the reverse adjacency list are affected for the edge changes similarly. The reverse adjacency array of lists is never regenerated from an entire adjacency array of lists.
+
+Explanation of the DigraphObj structure:
+
+numVertices: this integer keeps track of the digraph's number of vertices
+numEdges:  this integer keeps track of the digraph's number of edges
+SCCIndex: this integer is an index into the SCC array
+adjacencyList: this is an array of linked lists of outgoing neighbors
+reverseAdjacencyList: this is the reverse array of linked lists of outgoing neighbors
+SCCArray: this is an array of linked lists of vertices that are in the SCC's. Each SCC
+          has its own index in this array
+visitStatus: keeps track of the status of the phases of visitations to each node 
+entryTime: this keeps track of entry times in DFS
+finishTime: this keeps track of finish times in DFS
+SCCFlag: This flag is used to efficiently generate the SCC's only when absolutely needed
+
+Additional SCC specific methods added for PA4:
+
+int getCountSCC(Digraph G): 
+This function returns the integer SCCIndex in struct DigraphObj, which keeps track of the index to the SCCArray while the SCC's are being built, and at the end of this process, reflects the number of SCC's detected. This function checks the SCCFlag (described above) and only generates the SCC's if necessary.
+
+int getNumSCCVertices(Digraph G, int u):
+This function traverses the SCCArray in DigraphObj, and if it finds a vertex u, it returns the count of the number of vertices in the SCCArray index that it finds u. It returns -1 if u is not a legal vertex. This function checks the SCCFlag (described above) and only generates the SCC's if necessary.
+
+int inSameSCC(Digraph G, int u, int v):
+This function traverses the SCCArray in DigraphObj, and if it finds u and v in the same linked list of an index to SCCArray, then it returns 1 if u and v are in the same SCC, and returns 0 if u and v are not in the same SCC. It returns -1 if u or v is not a legal vertex. he function checks the SCCFlag (described above) and only generates the SCC's if necessary.
+
+void setupSCC(Digraph G):
+This function generates the SCC's and populates the SCCArray[] accordingly.
+
+void insertNodeSCCArray(Digraph G, int w):
+Used in building the SCC's. This function inserts a node into the linked list in the appropriate index on SCCArray[]. 
+
+void freeSCC(Digraph G);
+This function frees the memory allocated for the linked lists contained in SCCArray[].
+
+int getNextVertexWithLargestFinishTime(int myArray[], int numVertices):
+This is just a helper funtion created to assist in getting the  vertex number with the highest
+finish time.
+
+
+
+An ASCII figure of SCCArray[] follows. In this representation 3 SCC's have been identified. The first SCC is comprised of v1 and v2, the second SCC is comprised of v3, v5 and v6, and the third SCC is only comprised of v4. This scenario is based on the figure used during the pertinent lecture in class.
+
+
+SCCArray
+
+ 0       1       2       3      4
+|-------|-------|-------|------|------|-------------------------------|
+|       |       |       | null | null |     etc.                      |
+|---|---|---|---|---|---|------|------|-------------------------------|
+    |       |       |
+   (1)     (3)     (4)
+    |       |       |
+   (2)     (5)     null
+    |       |       
+   null    (6)      
+            |
+           null
+
+
+
+

@@ -1,0 +1,95 @@
+timestamp: 2019-05-22T10:09:19.170401
+CREATE TABLE "auth_user"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "first_name" CHAR(128),
+    "last_name" CHAR(128),
+    "email" CHAR(512),
+    "password" CHAR(512),
+    "registration_key" CHAR(512),
+    "reset_password_key" CHAR(512),
+    "registration_id" CHAR(512)
+);
+success!
+timestamp: 2019-05-22T10:09:19.179960
+CREATE TABLE "auth_group"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "role" CHAR(512),
+    "description" TEXT
+);
+success!
+timestamp: 2019-05-22T10:09:19.187666
+CREATE TABLE "auth_membership"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "group_id" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2019-05-22T10:09:19.194196
+CREATE TABLE "auth_permission"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "group_id" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  ,
+    "name" CHAR(512),
+    "table_name" CHAR(512),
+    "record_id" INTEGER
+);
+success!
+timestamp: 2019-05-22T10:09:19.199836
+CREATE TABLE "auth_event"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "time_stamp" TIMESTAMP,
+    "client_ip" CHAR(512),
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "origin" CHAR(512),
+    "description" TEXT
+);
+success!
+timestamp: 2019-05-22T10:09:19.207222
+CREATE TABLE "auth_cas"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "created_on" TIMESTAMP,
+    "service" CHAR(512),
+    "ticket" CHAR(512),
+    "renew" CHAR(1)
+);
+success!
+timestamp: 2019-05-22T10:09:19.219477
+CREATE TABLE "product"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "name" CHAR(512),
+    "description" CHAR(512),
+    "price" DOUBLE
+);
+success!
+timestamp: 2019-05-22T10:09:19.224362
+CREATE TABLE "review"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "product_id" INTEGER REFERENCES "product" ("id") ON DELETE CASCADE  ,
+    "rating" INTEGER,
+    "body" TEXT,
+    "email" CHAR(512),
+    "name" CHAR(512)
+);
+success!
+timestamp: 2019-06-04T09:35:27.081951
+ALTER TABLE "product" ADD "quantity" INTEGER;
+success!
+timestamp: 2019-06-04T09:35:27.088515
+CREATE TABLE "customer_order"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "order_date" CHAR(512),
+    "customer_info" BLOB,
+    "transaction_token" BLOB,
+    "cart" BLOB
+);
+success!
+timestamp: 2019-06-04T10:38:13.709434
+CREATE TABLE "shopping_cart"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "product_id" INTEGER REFERENCES "product" ("id") ON DELETE CASCADE  ,
+    "amount" INTEGER
+);
+success!
+timestamp: 2019-06-06T11:02:35.272122
+ALTER TABLE "shopping_cart" ADD "user_email" CHAR(512);
+success!

@@ -1,0 +1,34 @@
+Name: Natalie Petrosian
+UserID: npetrosi
+Assignment: PA1
+
+The following files were submitted for PA1: 
+
+List.c
+InsertSortLinked.c
+List.h
+ListClient.c (unaltered)
+Makefile
+
+The following are brief descriptions of the contents in each file: 
+
+List.c
+This file contains the ADT required for this programming assignment. 
+All of the pertinent methods are defined in this file. 
+
+InsertSortLinked.c
+This file was derived from the example provided name by the instructor "FileIO.c". 
+Code was added to create the list and the doubly linked nodes per the tokens 
+read from the input file. Calls were added to sort the linked lists and write them
+to the output file. 
+
+List.h
+This file contains the declarations of the ADT. 
+
+ListClient.c (unaltered)
+This file was provided by the instructor/TA's and it tests the ADT without errors.
+
+Makefile
+This file was provided by the instructor/TA's with a minor header added. 
+
+

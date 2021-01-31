@@ -1,0 +1,118 @@
+timestamp: 2019-05-03T17:25:05.613511
+CREATE TABLE "web2py_session_hw3"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "locked" CHAR(1),
+    "client_ip" CHAR(64),
+    "created_datetime" TIMESTAMP,
+    "modified_datetime" TIMESTAMP,
+    "unique_key" CHAR(64),
+    "session_data" BLOB
+);
+success!
+timestamp: 2019-05-03T17:25:05.622410
+CREATE TABLE "auth_user"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "first_name" CHAR(128),
+    "last_name" CHAR(128),
+    "email" CHAR(512),
+    "password" CHAR(512),
+    "registration_key" CHAR(512),
+    "reset_password_key" CHAR(512),
+    "registration_id" CHAR(512)
+);
+success!
+timestamp: 2019-05-03T17:25:05.634607
+CREATE TABLE "auth_group"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "role" CHAR(512),
+    "description" TEXT
+);
+success!
+timestamp: 2019-05-03T17:25:05.645304
+CREATE TABLE "auth_membership"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "group_id" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2019-05-03T17:25:05.650266
+CREATE TABLE "auth_permission"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "group_id" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  ,
+    "name" CHAR(512),
+    "table_name" CHAR(512),
+    "record_id" INTEGER
+);
+success!
+timestamp: 2019-05-03T17:25:05.656880
+CREATE TABLE "auth_event"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "time_stamp" TIMESTAMP,
+    "client_ip" CHAR(512),
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "origin" CHAR(512),
+    "description" TEXT
+);
+success!
+timestamp: 2019-05-03T17:25:05.668608
+CREATE TABLE "auth_cas"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "created_on" TIMESTAMP,
+    "service" CHAR(512),
+    "ticket" CHAR(512),
+    "renew" CHAR(1)
+);
+success!
+timestamp: 2019-05-03T17:25:05.676675
+CREATE TABLE "product"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "product_name" CHAR(512),
+    "product_quantity" INTEGER,
+    "sales_price" DOUBLE
+);
+success!
+timestamp: 2019-05-03T17:25:05.686062
+CREATE TABLE "profile"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT
+);
+success!
+timestamp: 2019-05-03T17:25:05.688913
+CREATE TABLE "orders"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT
+);
+success!
+timestamp: 2019-05-04T09:18:24.700039
+ALTER TABLE "profile" ADD "profile_street" TEXT;
+timestamp: 2019-05-04T09:18:24.704318
+ALTER TABLE "profile" ADD "profile_email" TEXT;
+timestamp: 2019-05-04T09:18:24.705902
+ALTER TABLE "profile" ADD "profile_name" TEXT;
+timestamp: 2019-05-04T09:18:24.707315
+ALTER TABLE "profile" ADD "profile_zip" TEXT;
+timestamp: 2019-05-04T09:18:24.711158
+ALTER TABLE "profile" ADD "profile_city" TEXT;
+success!
+timestamp: 2019-05-04T09:18:24.742822
+ALTER TABLE "orders" ADD "orders_amount_paid" DOUBLE;
+timestamp: 2019-05-04T09:18:24.744328
+ALTER TABLE "orders" ADD "orders_date" TIMESTAMP;
+timestamp: 2019-05-04T09:18:24.745656
+ALTER TABLE "orders" ADD "orders_product_id" INTEGER REFERENCES "product" ("id") ON DELETE CASCADE  ;
+timestamp: 2019-05-04T09:18:24.747204
+ALTER TABLE "orders" ADD "orders_email" INTEGER REFERENCES "profile" ("id") ON DELETE CASCADE  ;
+timestamp: 2019-05-04T09:18:24.753418
+ALTER TABLE "orders" ADD "orders_quantity" INTEGER;
+success!
+success!
+timestamp: 2019-08-27T14:22:08.088530
+CREATE TABLE "web2py_session_assignment3"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "locked" CHAR(1),
+    "client_ip" CHAR(64),
+    "created_datetime" TIMESTAMP,
+    "modified_datetime" TIMESTAMP,
+    "unique_key" CHAR(64),
+    "session_data" BLOB
+);
+success!

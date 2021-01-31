@@ -1,0 +1,78 @@
+20, 1 7, 2 8, 3 7, 4 8, 5 9, 6 16, 7 11, 8 12, 8 14, 9 10, 15 19, 16 18, 17 19
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+GetNeighborCount 7
+3
+PathExists 20 1
+NO
+PathExists 2 12
+YES
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+PathExists 6 20
+NO
+GetNeighborCount 7
+3
+GetNeighborCount 21
+ERROR
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+GetOrder
+20
+GetSize
+13
+20, 1 7, 2 8, 3 7, 4 8, 5 9, 6 16, 7 11, 8 12, 8 14, 9 10, 15 19, 16 18, 17 19

@@ -1,0 +1,28 @@
+15, 1 7, 2 6, 2 8, 3 9, 3 7, 4 5, 4 9, 5 10, 6 12, 8 12, 9 15, 11 13, 13 14
+GetOrder
+15
+GetSize
+13
+GetNeighborCount 2
+2
+PathExists 7 10
+YES
+PathExists 10 7
+YES
+PathExists 6 8
+YES
+PathExists 8 6
+YES
+PathExists 3 10
+YES
+PathExists 3 7
+YES
+PathExists 12 13
+NO
+PathExists 13 12
+NO
+GetOrder
+15
+GetSize
+13
+15, 1 7, 2 6, 2 8, 3 9, 3 7, 4 5, 4 9, 5 10, 6 12, 8 12, 9 15, 11 13, 13 14

@@ -1,0 +1,23 @@
+Name: Natalie Petrosian
+Class: 12B
+CruzID: npetrosi
+
+These are the files that are included in this submission:
+Dictionary.c
+Dictionary.h
+DictionaryTest.c
+DictionaryClient.c
+Makefile
+README (this file)
+log.txt
+
+To compile, type: 
+make
+
+To clean, type:
+make clean
+
+To check for memory leaks, type:
+make check
+
+

@@ -1,0 +1,14 @@
+10, 1 9, 1 2, 1 5, 1 7, 2 3, 3 4, 4 9, 8 10
+GetNeighborCount 4
+2
+GetNeighborCount 1
+4
+GetNeighborCount 6
+0
+GetOrder
+10
+GetSize
+8
+PathExists 10 4
+NO
+10, 1 9, 1 2, 1 5, 1 7, 2 3, 3 4, 4 9, 8 10

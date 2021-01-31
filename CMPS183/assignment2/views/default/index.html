@@ -1,0 +1,28 @@
+{{extend 'layout.html'}}
+
+{{block head}}
+{{end}}
+
+<div class="main_content">
+
+  <!-- Here goes your main HTML code. -->
+
+  <a href="{{=URL('default', 'list_page')}}", class="btn"> List </a>
+  <a href="{{=URL('default', 'createProduct')}}", class="btn"> Create Product </a>
+
+  {{for r in rows:}}
+
+      {{if r.product_starred is not None and r.product_starred == True:}}
+
+               <div class="post">
+        
+                 <div>Name: {{=r.product_name}}</div>
+                 <div>Sales price: ${{=r.product_price}}</div>
+                
+               </div>
+      {{pass}}
+
+  {{pass}}
+
+</div>
+

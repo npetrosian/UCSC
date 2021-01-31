@@ -1,0 +1,1 @@
+// MyClass myObject = new MyClass("hello");

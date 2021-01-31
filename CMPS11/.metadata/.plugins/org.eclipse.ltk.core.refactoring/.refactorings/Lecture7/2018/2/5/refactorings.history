@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Circle.java&apos; to &apos;Lecture8/src/(default package)&apos;&#x0A;- Original project: &apos;Lecture7&apos;&#x0A;- Destination element: &apos;Lecture8/src/(default package)&apos;&#x0A;- Original element: &apos;Circle.java&apos;" description="Copy compilation unit" destination="=Lecture8/src&lt;" element1="/src&lt;{Circle.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1517541198287" units="1" version="1.0"/>
+</session>

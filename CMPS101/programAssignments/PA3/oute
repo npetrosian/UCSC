@@ -1,0 +1,80 @@
+PrintDigraph
+15, 1 6, 1 7, 1 9, 1 13, 1 15, 2 1, 2 4, 2 6, 2 7, 2 9, 2 10, 2 12, 2 13, 2 14, 2 15, 3 9, 4 6, 4 7, 4 9, 4 10, 4 13, 4 14, 5 1, 5 2, 5 4, 5 6, 5 7, 5 10, 5 13, 5 14, 5 15, 6 7, 8 2, 8 9, 8 10, 8 11, 8 12, 8 13, 8 14, 8 15, 9 15, 10 1, 10 13, 11 1, 11 2, 11 4, 11 6, 11 7, 11 9, 11 10, 11 13, 11 15, 12 1, 12 9, 12 14, 13 7, 13 15, 14 1, 14 6, 14 7, 14 9, 14 13, 14 15, 15 6, 15 7
+GetOrder
+15
+GetSize
+65
+TopoSort
+1 13 9 15 6 7 
+AddEdge 1 14
+0
+TopoSort
+IMPOSSIBLE
+DeleteEdge 1 14
+0
+TopoSort
+1 13 9 15 6 7 
+AddEdge 9 13
+0
+AddEdge 12 10
+0
+TopoSort
+1 9 13 15 6 7 
+AddEdge 3 8
+0
+AddEdge 5 3
+0
+TopoSort
+1 9 13 15 6 7 
+DeleteEdge 12 10
+0
+DeleteEdge 5 3
+0
+TopoSort
+1 9 13 15 6 7 
+DeleteEdge 9 13
+0
+DeleteEdge 3 8
+0
+TopoSort
+1 13 9 15 6 7 
+DeleteEdge 8 11
+0
+DeleteEdge 11 2
+0
+DeleteEdge 2 4
+0
+DeleteEdge 4 10
+0
+TopoSort
+1 13 9 15 6 7 
+DeleteEdge 12 14
+0
+DeleteEdge 14 1
+0
+DeleteEdge 1 13
+0
+TopoSort
+1 9 15 6 7 
+DeleteEdge 9 15
+0
+DeleteEdge 15 6
+0
+DeleteEdge 6 7
+0
+TopoSort
+1 15 9 7 6 
+AddEdge 8 3
+0
+AddEdge 10 4
+0
+AddEdge 9 13
+0
+TopoSort
+1 9 13 15 7 6 
+GetSize
+73
+GetOrder
+15
+PrintDigraph
+15, 1 6, 1 7, 1 9, 1 15, 2 1, 2 6, 2 7, 2 9, 2 10, 2 12, 2 13, 2 14, 2 15, 3 9, 4 6, 4 7, 4 9, 4 13, 4 14, 5 1, 5 2, 5 4, 5 6, 5 7, 5 10, 5 13, 5 14, 5 15, 8 2, 8 3, 8 9, 8 10, 8 12, 8 13, 8 14, 8 15, 9 13, 10 1, 10 4, 10 13, 11 1, 11 4, 11 6, 11 7, 11 9, 11 10, 11 13, 11 15, 12 1, 12 9, 13 7, 13 15, 14 6, 14 7, 14 9, 14 13, 14 15, 15 7

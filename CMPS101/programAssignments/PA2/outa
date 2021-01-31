@@ -1,0 +1,10 @@
+4, 1 2, 2 3, 3 4
+GetOrder
+4
+GetSize
+3
+GetNeighborCount 4
+1
+PathExists 1 3
+YES
+4, 1 2, 2 3, 3 4

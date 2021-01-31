@@ -1,0 +1,9 @@
+10, 1 9, 1 2, 3 2, 4 3, 4 9, 5 1, 7 1, 10 8
+PrintGraph
+GetNeighborCount 4
+GetNeighborCount 1
+GetNeighborCount 6
+GetOrder
+GetSize
+PathExists 10 4
+PrintGraph

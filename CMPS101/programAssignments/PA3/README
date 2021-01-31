@@ -1,0 +1,71 @@
+Name: Natalie Petrosian
+UserID: npetrosi
+Assignment: PA3
+
+Digraph.c:
+Contains the methods and functions for the Digraph ADT.
+
+Digraph.h:
+Contains the declarations for the Digraph ADT.
+
+DigraphProperties.c:
+This is the client for the Digraph ADT which reads the input file and generates the output file.
+
+List.c:
+Provided by the instructors. Provides the methods and data for the List ADT.
+
+List.h:
+Provided by the instructors. Provides the declarations for the List ADT.
+
+Makefile:
+Compiles and links the code into the executable DigraphProperties.
+
+Queue.c:
+Provided by the instructors. Provides the methods and data for the Queue ADT used in BFS.
+
+Queue.h:
+Provided by the instructors. Provides the declarations for the Queue ADT used in BFS.
+
+Stack.c:
+Provided by the instructors. Provides the methods and data for the Stack ADT used in TopoSort.
+
+Stack.h:
+Provided by the instructors. Provides the declarations for the Stack ADT used in TopoSort.
+
+Additional Requirements for PA3: 
+
+Explanation of Algorithm for Distance: 
+Per Professor Finkelstein's recommendation, the algorithm on page 595 of CLRS was closely followed 
+for this method. Initially, arrays were created for color and distance, and all the colors were initialized
+to WHITE, and all the distances were set to -1. Then, an empty Queue was created using the ADT in the provided
+Queue.c. The parameter s, which designates the number of the vertex we are trying to find the other distances
+from, is placed into the Queue. Next, we go into a while loop which stays active while the Queue is not empty.
+Within the while loop, we first Dequeue the vertex at the top of the Queue (let's call this u), and for all 
+the vertices in its adjacency list (let's call this v), if v's color is white, we set its corresponding index 
+in the color array to GRAY and its corresponding index in the distance array will be set to u's distance + 1. 
+Next, we put v in the Queue. After the for loop, for each v in the adjacency array is completed, we set u's 
+color to BLACK. 
+COMPLEXITY OF THIS ALGORITHM: O(n+m)
+
+Explanation of Algorithm for Acyclic:
+The acyclic method prints a "YES" or "NO" to the output file depending on the boolean returned from DFSTestAcyclic. 
+DFSTestAcyclic's algorithm is as follows: we start at vertex w and set its visit status to INPROGRESS. Then we go
+into a for loop traversing all of the nodes in the adjacency list for w. If the current node in our for loop
+is marked INPROGRESS, we return true. Otherwise, we recursively call DFSTestAcyclic with the number of the current
+vertex. Once our for loop is complete, we set the visitStatus array at index w to ALLDONE. The pseudocode for this
+algorithm was provided by the instructor. 
+COMPLEXITY OF THIS ALGORITHM: O(n+m)
+
+Explanation of Algorithm for TopoSort:
+First, we create a stack using the ADT in Stack.c (provided by the instructor). Next, we set all the indexes 
+in the visitStatus array to UNVISITED. Then, we perform a DepthFirstSearch and push the results into the stack. We then
+print the values of the stack in reverse order of what DepthFirstSearch had pushed in it to the output file. DepthFirstSearch's
+algorithm is as follows: for the starting vertex (w), it sets the entry time to current time and visitStatus at index w to 
+INPROGRESS. Then, we visit every node in w's adjacency list, and if its visitStatus is UNVISITED, we recursively call
+DepthFirstSearch with that vertex and an incremented current time. When we're done visiting every node in the adjacency list, 
+we set w's finish time to the current time and its visitStatus to ALLDONE and push w onto the stack.   
+COMPLEXITY OF THIS ALGORITHM: O(n+m)
+
+
+
+

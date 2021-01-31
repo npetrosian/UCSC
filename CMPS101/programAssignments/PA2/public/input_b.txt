@@ -1,0 +1,7 @@
+4, 1 2, 3 4
+PrintGraph
+GetOrder
+GetSize
+GetNeighborCount 2
+PathExists 1 4
+PrintGraph

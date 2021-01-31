@@ -1,0 +1,27 @@
+These are the files that are included in this submission:
+
+Makefile
+README (this file)
+Recursion (the jar file)
+Recursion.class (the compiled class file)
+Recursion.java (the java source file)
+
+To clean the binaries, do this:
+make clean
+
+To compile the Java source file, and create the .class and the jar file Recursion do this: 
+make
+
+
+The Makefile creates a temporary manifest file that makes the main routine in Recursion.java take effect when you run the jar file Recursion.
+
+When you run Recursion, you should see:
+
+-1 2 6 12 9 2 -5 -2 8 5 7 
+minIndex = 6
+maxIndex = 3
+7 5 8 -2 -5 2 9 12 6 2 -1 
+7 5 8 -2 -5 2 9 12 6 2 -1 
+7 5 8 -2 -5 2 9 12 6 2 -1 
+
+

@@ -1,0 +1,15 @@
+4, 1 3, 2 4, 3 4, 4 3, 3 2
+PrintDigraph
+GetSize
+GetCountSCC
+GetNumSCCVertices
+GetNumSCCVertices 4
+GetOutDegree 4
+GetOutDegree 5
+InSameSCC 2 4
+DeleteEdge 2 4
+InSameSCC 2 4
+GetCountSCC
+AddEdge 2 1
+GetCountSCC
+InSameSCC 2

@@ -1,0 +1,77 @@
+{{extend 'layout.html'}}
+
+{{block head}}
+{{end}}
+
+<div class="main_content">
+
+   <a href="{{=URL('default', 'index')}}", class="btn"> Home </a>
+   <a href="{{=URL('default', 'createProduct')}}", class="btn"> Create Product </a>
+
+  {{for r in rows:}}
+       <div class="post">
+
+         <div>Name: {{=r.product_name}}</div>
+         <div>Quantity in stock: {{=r.product_quantity}}</div>
+         <div>Quantity sold: {{=r.product_quantity_sold}}</div>
+         <div>Sales price: ${{=r.product_price}}</div>
+         <div>Cost: ${{=r.product_cost}}</div>
+      
+
+         {{
+           my_profit = (r.product_price - r.product_cost) * r.product_quantity_sold
+         }}
+         <div>Profit: ${{=my_profit}}</div>
+
+         <div>Description: {{=r.product_description}}</div>
+
+         <div class="button_row">
+
+            {{if r.product_starred is not None and auth.user is not None:}}
+
+                   {{if r.product_starred == True:}}
+                        <a href="{{=URL('default', 'star_clicked', args=[r.id], user_signature=True)}}"><i class="fa fa-star" style="color:yellow"></i></a>
+                   {{pass}}
+
+                   {{if r.product_starred == False:}}
+                        <a href="{{=URL('default', 'star_clicked', args=[r.id], user_signature=True)}}"><i class="fa fa-star-o" style="color:black"></i></a>
+                   {{pass}}
+
+            {{pass}}
+
+            {{if r.product_starred is not None and auth.user is None:}}
+
+                   {{if r.product_starred == True:}}
+                        <a><i class="fa fa-star" style="color:yellow"></i></a>
+                   {{pass}}
+
+                   {{if r.product_starred == False:}}
+                        <a><i class="fa fa-star-o" style="color:black"></i></a>
+                   {{pass}}
+
+            {{pass}}
+
+            {{if auth.user is not None:}}
+
+                    <a href="{{=URL('default', 'increment_clicked', args=[r.id], user_signature=True)}}" class="btn">+1</a>
+                    <a href="{{=URL('default', 'decrement_clicked', args=[r.id], user_signature=True)}}" class="btn">-1</a>
+
+            {{pass}}
+
+            {{if auth.user is not None and auth.user.email == r.product_creator:}}
+
+                    <a href="{{=URL('default', 'edit', args=[r.id], user_signature=True)}}", class="btn"><i class="fa fa-pencil-square-o"></i> Edit</a>
+
+                    <a href="{{=URL('default', 'delete', args=[r.id], user_signature=True)}}", class="btn"><i class="fa fa-trash-o"></i> Delete</a>
+                    
+
+            {{pass}}
+            
+            
+
+         </div>
+        
+       </div>
+  {{pass}}
+
+</div>

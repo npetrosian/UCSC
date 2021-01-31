@@ -1,0 +1,56 @@
+PrintDigraph
+4, 1 3, 2 4, 3 2, 3 4, 4 3
+PrintDigraph 1
+ERROR
+GetSize
+5
+GetSize 2
+ERROR
+GetSize 2
+ERROR
+GetOutDegree 1
+1
+GetOutDegree 1 3
+ERROR
+GetOutDegree
+ERROR
+AddEdge 1 4
+0
+AddEdge 1 4 1
+ERROR
+AddEdge 2
+ERROR
+DeleteEdge 3 4
+0
+DeleteEdge 4 3 3
+ERROR
+DeleteEdge 2
+ERROR
+GetOrder
+4
+GetOrder 1
+ERROR
+Distance 1 4
+1
+Distance 1
+ERROR
+Distance 1 4 3
+ERROR
+GetCountSCC
+2
+GetCountSCC 1
+ERROR
+GetNumSCCVertices
+ERROR
+GetNumSCCVertices 2
+3
+GetNumSCCVertices 2 3
+ERROR
+InSameSCC 1 3
+NO
+InSameSCC 1 2 3
+ERROR
+InSameSCC 2
+ERROR
+InSameSCC
+ERROR
