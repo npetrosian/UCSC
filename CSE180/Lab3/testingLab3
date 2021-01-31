@@ -1,0 +1,15 @@
+\i lab3_create.sql;
+\i lab3_data_loading.sql;
+\i combine.sql;
+
+\i lab3_create.sql;
+\i lab3_data_loading.sql;
+\i foreign.sql;
+\i general.sql;
+\i unittests.sql;
+
+\i lab3_create.sql;
+\i lab3_data_loading.sql;
+\i createview.sql;
+\i queryview.sql;
+\i createindex.sql;
