@@ -1,0 +1,74 @@
+Pre-lab Questions:
+
+1. What command will show you which groups you are a member of? 
+
+The command "id" will print user and group information for a specified user.
+
+2. What does the environmental variable “$?” hold? (Hint: the command ‘echo $?’ will should you this
+on your screen)
+
+The environment variable "$?" holds the exit value of the previous command. 
+It contains 0 if the previous command exited successfully or a non-zero value
+if the previous command did not exit successfully. 
+
+3. What key combination will suspend a currently running process and place it as a background
+process?
+
+Ctrl-Z will suspend a currently running process and place it in the background. 
+
+4. With what command (and arguments) can you find out your kernel version and the “nodename”?
+[The output should not include any other information]
+
+The command and arguments to use in order to find the kernel version and "nodename" is:
+uname -r -n
+where -r is the argument which will print the kernel version and -n will print the nodename. 
+For example, on the UCSC campus timeshare, we get the following output:
+unix1.lt.ucsc.edu 3.10.0-1062.18.1.el7.x86_64
+
+5. What is the difference between the paths “.”, “..”, and “~”? What does the path “/” refer to when not
+preceded by anything?
+
+The path "." refers to the current directory. 
+The path ".." refers to the directory above the current directory. 
+The path "~" refers to the user's home directory. 
+The path "/" refers to the root directory. 
+
+6. What is a pid? Which command would you use to find the “pid” for a running process?
+
+Every process running on a Linux/Unix system is identified by a unique number. That number is known 
+as the pid. The command "ps" lists process ids in various formats depending on the parameters you 
+pass to it. For example, typing "ps" by itself lists the processes belonging to the user who invoked
+the command. On the other hand, typing "ps -ef" lists all of the processes in the system. The output 
+of "ps -ef" can be piped to "grep" to filter out the pid of a running process. 
+
+7. Write a single command that will return every user’s default shell. 
+
+Below are two approaches that achieve the required results:
+
+getent passwd | cut -d: -f1,7
+
+or
+
+awk -F':' '{ print $1 " " FS " " $NF }' /etc/passwd
+
+8. What is the difference between “sudo” and “su root”?
+
+Running "sudo" in conjunction with a command will run that command in super user mode. The command "su root"
+will put the invoker of the command in a super user shell, in effect, giving unlimited power to the user. Both of these commands are restricted in a secure system. 
+
+9. How would you tell your computer to run a program or script on a schedule or set interval on
+Linux?
+
+On Linux, the "crontab -e" command can be used to run a script every 30 minutes as follows: 
+(let's assume the name of the script is /afs/cats.ucsc.edu/users/n/npetrosi/myscript)
+Running "crontab -e" brings up an editor. The following should be entered in the editor:
+
+*/30 * * * * /afs/cats.ucsc.edu/users/n/npetrosi/myscript
+
+Now, we can save and exit the editor. As a result, "myscript" will be invoked at the 30th minute of each hour. 
+
+10. 
+
+
+
+
